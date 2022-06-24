@@ -1,6 +1,6 @@
 [package]
 name = "overlinejunior/hearty"
-version = "0.2.0"
+version = "0.2.2"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 licence = "MIT"
@@ -8,3 +8,4 @@ author = "Over"
 exclude = ["selene.toml", "roblox.toml"]
 
 [dependencies]
+Signal = "sleitnick/signal@^1"

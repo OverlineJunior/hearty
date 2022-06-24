@@ -1,12 +1,13 @@
-type Dict<K, V> = {[K]: V}
-type Data = Dict<any, any>
-type PredicateFn = (number, {}) -> boolean
+local Types = require(script.Parent.Types)
 
+--[=[
+    @class Filter
+]=]
 local Filter = {}
 Filter.__index = Filter
 
 
-function Filter.new(hum: Humanoid, predicateFn: PredicateFn, storage: Dict<any, any>): any
+function Filter.new(hum: Humanoid, predicateFn: Types.PredicateFn, storage: Types.Dict<any, any>): any
     local self = setmetatable({}, Filter)
 
     if not storage[hum] then
@@ -28,6 +29,8 @@ function Filter.new(hum: Humanoid, predicateFn: PredicateFn, storage: Dict<any, 
 end
 
 
+--[=[
+]=]
 function Filter:Destroy()
     table.remove(self._Storage[self._Humanoid], self._Index)
 
