@@ -1,7 +1,6 @@
 --[[
-    TODO: Finish the documentation.
-    DONE: Create a Types module for shared types.
-    DONE: Add damage and heal signals so we can also get the data.
+    TODO: Filters should be used to modify damage/heal instead of just allowing or denying them - if damage/heal <= 0, act as if it
+    was denied, that is, return.
     TODO: Try adding Hearty.GetHumanoidDamaged(hum), which returns a signal that is fired when hum is damaged (replicate stuff for heal too).
 ]]
 
