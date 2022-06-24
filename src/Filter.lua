@@ -2,6 +2,8 @@ local Types = require(script.Parent.Types)
 
 --[=[
     @class Filter
+
+    Class used by Hearty to allow or deny damage/heal requests, constructed by calling either [Hearty.AddDamageFilter] or [Hearty.AddHealFilter].
 ]=]
 local Filter = {}
 Filter.__index = Filter
@@ -30,6 +32,7 @@ end
 
 
 --[=[
+    Deattaches the object from the humanoid it was attached to. Called automatically when the humanoid it is attached to is destroyed.
 ]=]
 function Filter:Destroy()
     table.remove(self._Storage[self._Humanoid], self._Index)
