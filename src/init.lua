@@ -6,7 +6,7 @@
 
 local Filter = require(script.Filter)
 local Types = require(script.Types)
-local Signal = require(script.Signal)
+local Signal = require(script.Parent.Signal)
 
 type FilterDict = Types.Dict<Humanoid, {any}?>
 --[=[
